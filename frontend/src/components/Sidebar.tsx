@@ -44,7 +44,7 @@ const Sidebar = ({
           }}
           className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors ${
             activeTab === "all"
-              ? "bg-blue-200/50 text-sidebar-accent-foreground"
+              ? "bg-blue-200/50 text-primary"
               : "text-sidebar-foreground hover:bg-blue-200/25"
           }`}
         >
@@ -58,8 +58,8 @@ const Sidebar = ({
           }}
           className={`w-full flex items-center gap-3 px-4 py-3 rounded-lg transition-colors relative ${
             activeTab === "saved"
-              ? "bg-blue-200/50 text-sidebar-accent-foreground"
-              : "text-sidebar-foreground hover:hover:bg-blue-200/25"
+              ? "bg-blue-200/50 text-primary"
+              : "text-sidebar-foreground hover:bg-blue-200/25"
           }`}
         >
           <Heart className="w-5 h-5" />
@@ -87,7 +87,7 @@ const Sidebar = ({
         <Button
           onClick={handleLogout}
           variant="ghost"
-          className="w-full justify-start gap-3 text-sidebar-foreground hover:bg-sidebar-accent/50"
+          className="w-full justify-start gap-3 text-sidebar-foreground hover:bg-blue-200/25 hover:text-primary"
         >
           <LogOut className="w-5 h-5" />
           Logout

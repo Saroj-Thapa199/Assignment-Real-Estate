@@ -5,11 +5,11 @@ export interface JwtPayload {
   userId: string;
 }
 
-const { JWT_ACCESS_SECRET, ACCESS_TOKEN_EXPIRES } = config;
+const { JWT_ACCESS_SECRET } = config;
 
 export const generateToken = (userId: string) => {
   const token = jwt.sign({ userId }, JWT_ACCESS_SECRET, {
-    expiresIn: ACCESS_TOKEN_EXPIRES as jwt.SignOptions["expiresIn"],
+    expiresIn: "7d",
   });
 
   return token;
